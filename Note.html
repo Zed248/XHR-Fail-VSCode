@@ -1,0 +1,22 @@
+"XHR Failed" error when attempting to install VS Code Extension
+Brand new Windows 10 Dell out of the box.
+Installed VS Code then tried to install extension, specifically the 'Salesforce Extension Pack', but I see reports of this error for other extensions too.
+It failed to install with 'XHR Failed'.
+Just on home wifi here, no corporate firewall, proxy, VPN or anything.
+
+Got it working with the help of this post
+Press Windows key and type 'Network Connections'
+Select 'View Network Connections'
+Right click the network that you are connected to and select 'Properties'
+Click 'Internet Protocol Version 4 (TCP/IPv4) and 'Properties'
+Click 'Use the following DNS server addresses' and enter
+Preferred DNS Server: 8.8.8.8
+Alternate DNS Server: 8.8.4.4
+(These are Google's DNS servers)
+Click 'OK', 'Close'
+Press Windows key and enter 'cmd'
+Click on 'Command Prompt'
+Type
+ipconfig /flushdns
+enter
+Restart VS Code and try again to install extension
